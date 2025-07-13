@@ -27,113 +27,10 @@
         <link rel="stylesheet" href="/css/tailwind/tailwind.min.css">
         <script src="/js/main.js" defer></script>
         <script src="/js/video.js" defer></script>
-        <style>
-    html { scroll-behavior: smooth; }
-    
-    /* Modern improvements */
-    .modern-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      transition: box-shadow 0.3s ease;
-    }
-    
-    .modern-card:hover {
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-    
-    .gradient-bg {
-      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    }
-    
-    .pricing-card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .pricing-features {
-      flex: 1;
-    }
-    
-    .modern-btn {
-      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-      border: none;
-      border-radius: 12px;
-      font-weight: 600;
-      letter-spacing: 0.025em;
-      transition: all 0.2s ease;
-      font-size: 1.1rem;
-      padding: 1rem 2rem;
-    }
-    
-    .modern-btn:hover {
-      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
-    }
-    
-    .modern-btn-large {
-      font-size: 1.25rem;
-      padding: 1.25rem 2.5rem;
-    }
-    
-    .hero-gradient {
-      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    }
-    
-    .hero-btn {
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      color: #1e40af;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .hero-btn:hover {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .text-modern-gray {
-      color: #6b7280;
-    }
-    
-    .bg-modern-gray {
-      background-color: #f9fafb;
-    }
-    
-    .faq-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      transition: all 0.2s ease;
-    }
-    
-    .faq-card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    .cta-gradient {
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    }
-    
-    .modern-btn-red {
-      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-      border: none;
-      border-radius: 12px;
-      font-weight: 600;
-      letter-spacing: 0.025em;
-      transition: all 0.2s ease;
-      font-size: 1.1rem;
-      padding: 1rem 2rem;
-    }
-    
-    .modern-btn-red:hover {
-      box-shadow: 0 10px 20px rgba(220, 38, 38, 0.4);
-    }
-        </style>
     </head>
-    <body class="antialiased bg-body text-body font-body" id="top">
+    <body class="antialiased bg-body text-body font-body scroll-smooth" id="top">
         <div>
-            <section class="xl:bg-contain bg-top bg-no-repeat flex flex-col gap-0 hero-gradient">
+            <section class="xl:bg-contain bg-top bg-no-repeat flex flex-col bg-gradient-to-br from-blue-500 to-blue-700">
                 <div class="container px-4 mx-auto">
                     <nav class="flex justify-between items-center py-6">
                         <a class="text-3xl font-semibold leading-none" href="#">
@@ -145,7 +42,7 @@
                             <h1 class="text-5xl md:text-6xl mb-6 font-bold font-heading text-white leading-tight">Automatische PDF Reports für Deinen Podcast</h1>
                             <p class="text-xl text-blue-100 leading-relaxed mb-8">Alle Spotify und Apple Daten inklusive Durchhörraten und Demographie auf einen Blick in deinem Corporate Design.</p>
                             <div class="mx-auto mb-12">
-                                <a class="inline-block font-bold modern-btn-large hero-btn transition-all duration-200" href="https://connect.openpodcast.app/">Podcast Verbinden</a>
+                                <a class="inline-block font-bold text-xl px-10 py-5 text-blue-700 bg-gradient-to-br from-white to-gray-100 border-2 border-white/30 rounded-xl shadow-lg hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">Podcast Verbinden</a>
                             </div>
                         </div>
                         <div class="relative max-w-6xl mx-auto hero-container">
@@ -194,18 +91,18 @@
                             </div>
                         </div>
                         <div class="relative w-full lg:w-1/2 my-12 lg:my-0">
-                            <img class="relative mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/audience_growth_portrait.jpg" alt="audience_growth_portrait">
+                            <img class="mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/audience_growth_portrait.jpg" alt="audience_growth_portrait">
                             <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
                             <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-32 overflow-x-hidden bg-modern-gray">
+            <section class="py-16 md:py-32 overflow-x-hidden bg-gray-50">
                 <div class="container px-4 mx-auto">
                     <div class="flex flex-wrap lg:flex-nowrap gap-4">
                         <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0">
-                            <img class="relative mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/apple_spotify_portrait.jpg" alt="apple_spotify_portrait">
+                            <img class="mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/apple_spotify_portrait.jpg" alt="apple_spotify_portrait">
                             <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
                             <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
                         </div>
@@ -239,15 +136,15 @@
                     </div>
                     <div class="flex flex-wrap -mx-3 items-stretch">
                         <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
-                            <div class="pt-12 pb-8 px-6 text-center modern-card pricing-card">
+                            <div class="pt-12 pb-8 px-6 text-center bg-white rounded-2xl shadow-md hover:shadow-2xl transition-shadow h-full flex flex-col">
                                 <img class="h-32 mb-8 mx-auto" src="/images/podcast.svg" alt="podcast">
                                 <h3 class="mb-4 text-3xl font-bold font-heading text-gray-900">Podcast Report</h3>
                                 <div class="mb-6">
                                     <span class="text-5xl font-bold text-blue-600">€39</span>
-                                    <span class="text-lg text-modern-gray">/Monat</span>
+                                    <span class="text-lg text-gray-500">/Monat</span>
                                 </div>
-                                <p class="text-sm text-modern-gray mb-6">(excl. MwSt.)</p>
-                                <div class="pricing-features">
+                                <p class="text-sm text-gray-500 mb-6">(excl. MwSt.)</p>
+                                <div class="flex-1">
                                     <ul class="space-y-4 mb-8 text-left">
                                         <li class="flex items-center">
                                             <svg
@@ -320,12 +217,12 @@
                                     </ul>
                                 </div>
                                 <div class="mt-auto">
-                                    <a class="block text-white text-center font-semibold modern-btn" href="https://connect.openpodcast.app/">Kostenlos Starten</a>
+                                    <a class="block text-white text-center font-semibold bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl text-lg px-8 py-4 hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">Kostenlos Starten</a>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
-                            <div class="pt-12 pb-8 px-6 text-center text-white gradient-bg rounded-2xl shadow-xl relative overflow-hidden pricing-card transform scale-105">
+                            <div class="pt-12 pb-8 px-6 text-center text-white bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-xl relative overflow-hidden h-full flex flex-col transform scale-105">
                                 <img class="h-32 mb-8 mx-auto" src="/images/podcast_plus.svg" alt="podcast_plus">
                                 <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-2 text-sm font-bold rounded-bl-lg">
                                     BELIEBT
@@ -336,7 +233,7 @@
                                     <span class="text-lg text-blue-100">/Monat</span>
                                 </div>
                                 <p class="text-sm text-blue-100 mb-6">(excl. MwSt.)</p>
-                                <div class="pricing-features">
+                                <div class="flex-1">
                                     <ul class="space-y-4 mb-8 text-left">
                                         <li class="flex items-center">
                                             <svg
@@ -443,20 +340,20 @@
                                     </ul>
                                 </div>
                                 <div class="mt-auto">
-                                    <a class="block text-white text-center font-semibold modern-btn-red" href="https://connect.openpodcast.app/">Jetzt Starten</a>
+                                    <a class="block text-white text-center font-semibold bg-gradient-to-br from-red-600 to-red-700 rounded-xl text-lg px-8 py-4 hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">Jetzt Starten</a>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
-                            <div class="pt-12 pb-8 px-6 text-center modern-card pricing-card">
+                            <div class="pt-12 pb-8 px-6 text-center bg-white rounded-2xl shadow-md hover:shadow-2xl transition-shadow h-full flex flex-col">
                                 <img class="h-32 mb-8 mx-auto" src="/images/podcast_pro.svg" alt="podcast_pro">
                                 <h3 class="mb-4 text-3xl font-bold font-heading text-gray-900">Agentur Paket Plus</h3>
                                 <div class="mb-6">
                                     <span class="text-5xl font-bold text-blue-600">€149</span>
-                                    <span class="text-lg text-modern-gray">/Monat</span>
+                                    <span class="text-lg text-gray-500">/Monat</span>
                                 </div>
-                                <p class="text-sm text-modern-gray mb-6">(excl. MwSt.)</p>
-                                <div class="pricing-features">
+                                <p class="text-sm text-gray-500 mb-6">(excl. MwSt.)</p>
+                                <div class="flex-1">
                                     <ul class="space-y-4 mb-8 text-left">
                                         <li class="flex items-center">
                                             <svg
@@ -580,7 +477,7 @@
                                     </ul>
                                 </div>
                                 <div class="mt-auto">
-                                    <a class="block text-white text-center font-semibold modern-btn" href="mailto:info@openpodcast.dev">Kontaktiere Uns</a>
+                                    <a class="block text-white text-center font-semibold bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl text-lg px-8 py-4 hover:shadow-xl transition-all" href="mailto:info@openpodcast.dev">Kontaktiere Uns</a>
                                 </div>
                             </div>
                         </div>
@@ -641,7 +538,7 @@
                             >
                         </div>
                         <div class="space-y-4">
-                            <a class="inline-block text-white modern-btn modern-btn-large cta-gradient shadow-lg" href="https://connect.openpodcast.app">
+                            <a class="inline-block text-white bg-gradient-to-br from-blue-700 to-blue-500 rounded-xl font-semibold text-xl px-10 py-5 hover:shadow-xl transition-all shadow-lg" href="https://connect.openpodcast.app">
                                 30 Tage kostenlos testen
                             </a>
                             <div class="flex items-center justify-center space-x-6 text-sm text-gray-500">
@@ -677,149 +574,149 @@
                 </div>
             </div>
         </section>
-        <section class="py-20 bg-modern-gray">
+        <section class="py-20 bg-gray-50">
             <div class="container px-4 mx-auto max-w-4xl">
                 <div class="mx-6 md:mx-12 lg:mx-16">
                     <div class="text-center mb-16">
                         <h2 class="text-4xl font-bold text-gray-900 mb-4">Häufig gestellte Fragen</h2>
-                        <p class="text-xl text-modern-gray">Hier finden Sie Antworten auf die wichtigsten Fragen zu unserem Service</p>
+                        <p class="text-xl text-gray-500">Hier finden Sie Antworten auf die wichtigsten Fragen zu unserem Service</p>
                     </div>
                 </div>
                 <div class="faq-section space-y-4">
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Muss ich meine Login-Daten mit Open Podcast teilen?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Nein. Wir benötigen nur einen Lesezugriff auf Deine Daten über eine Freigabe Deines Hosters. Wir benötigen keine Login-Daten.</p>
+                            <p class="text-gray-500 leading-relaxed">Nein. Wir benötigen nur einen Lesezugriff auf Deine Daten über eine Freigabe Deines Hosters. Wir benötigen keine Login-Daten.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Braucht ihr den vollen Zugang zu meinem Account?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Nein. Du musst uns einmalig am Anfang Zugriff auf Deine Daten geben indem du unser Tool mit Deinem Hoster verbindest. Bei Apple musst du unsere E-Mail Adresse mit der Rolle "Analyst" hinzufügen. Wir schicken dir nach der Anmeldung eine E-Mail mit den genauen Anweisungen.</p>
+                            <p class="text-gray-500 leading-relaxed">Nein. Du musst uns einmalig am Anfang Zugriff auf Deine Daten geben indem du unser Tool mit Deinem Hoster verbindest. Bei Apple musst du unsere E-Mail Adresse mit der Rolle "Analyst" hinzufügen. Wir schicken dir nach der Anmeldung eine E-Mail mit den genauen Anweisungen.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Gibt es eine Geld-Zurück-Garantie?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Wir bieten eine 30 Tage Geld-Zurück-Garantie. Wenn Du nicht zufrieden bist, kannst Du uns einfach kontaktieren und wir erstatten Dir den vollen Betrag zurück.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Wir bieten eine 30 Tage Geld-Zurück-Garantie. Wenn Du nicht zufrieden bist, kannst Du uns einfach kontaktieren und wir erstatten Dir den vollen Betrag zurück.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Ist das Design veränderbar?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Ab dem Agentur-Paket bieten wir die Möglichkeit das Design des PDF-Reports beliebig anzupassen. Dies beinhaltet die Farben, das Logo und die Schriftart. Wir können Seiten hinzufügen oder entfernen und auch die Anordnung der einzelnen Elemente anpassen.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Ab dem Agentur-Paket bieten wir die Möglichkeit das Design des PDF-Reports beliebig anzupassen. Dies beinhaltet die Farben, das Logo und die Schriftart. Wir können Seiten hinzufügen oder entfernen und auch die Anordnung der einzelnen Elemente anpassen.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Welche Daten werden gesammelt?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Pro Podcast sammeln wir alle Daten, die auf dem jeweiligen Hoster bzw. Plattform verfügbar sind. Das beinhaltet Downloads, Hörer⋅innen, Geräte, Länder, Städte, Geschlecht, Alter, Podcast-App, Podcast-Client, Podcast Episoden-Daten, Performance der Episoden, und mehr.</p>
+                            <p class="text-gray-500 leading-relaxed">Pro Podcast sammeln wir alle Daten, die auf dem jeweiligen Hoster bzw. Plattform verfügbar sind. Das beinhaltet Downloads, Hörer⋅innen, Geräte, Länder, Städte, Geschlecht, Alter, Podcast-App, Podcast-Client, Podcast Episoden-Daten, Performance der Episoden, und mehr.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Wo werden die Daten gespeichert (GDPR)?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Wir speichern Deine Daten auf einem Server in Deutschland. Wir verwenden keine Cookies und tracken keine Nutzer⋅innen. Wir speichern nur die Daten, die Du uns zur Verfügung stellst. Wir geben Deine Daten nicht an Dritte weiter.</p>
+                            <p class="text-gray-500 leading-relaxed">Wir speichern Deine Daten auf einem Server in Deutschland. Wir verwenden keine Cookies und tracken keine Nutzer⋅innen. Wir speichern nur die Daten, die Du uns zur Verfügung stellst. Wir geben Deine Daten nicht an Dritte weiter.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Wie lange dauert es bis zum ersten Report?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Nachdem Du Deinen Podcast angemeldet hast, dauert es ca. 24 Stunden bis wir die ersten Daten sammeln können. Danach kannst du den Report jederzeit generieren.</p>
+                            <p class="text-gray-500 leading-relaxed">Nachdem Du Deinen Podcast angemeldet hast, dauert es ca. 24 Stunden bis wir die ersten Daten sammeln können. Danach kannst du den Report jederzeit generieren.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Welche Anbieter unterstützt ihr?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Wir unterstützen Spotify, Apple Podcasts, Anchor, YouTube und Podigee. Wenn Du einen anderen Hoster anbinden möchtest, kontaktiere uns einfach.</p>
+                            <p class="text-gray-500 leading-relaxed">Wir unterstützen Spotify, Apple Podcasts, Anchor, YouTube und Podigee. Wenn Du einen anderen Hoster anbinden möchtest, kontaktiere uns einfach.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Kann ich meinen Podcast weiter selbst betreiben?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Wir benötigen nur einen Lesezugriff auf deine Daten. Du kannst Deinen Podcast weiterhin selbst betreiben und wir sammeln die Daten transparent im Hintergrund.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Wir benötigen nur einen Lesezugriff auf deine Daten. Du kannst Deinen Podcast weiterhin selbst betreiben und wir sammeln die Daten transparent im Hintergrund.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Was passiert wenn ich kündige?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Du kannst den Vertrag jederzeit monatlich kündigen. Du kannst auch jederzeit zwischen den Paketen wechseln.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Du kannst den Vertrag jederzeit monatlich kündigen. Du kannst auch jederzeit zwischen den Paketen wechseln.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Kann ich den Report selbst erstellen?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Du kannst den Report jederzeit und so oft selbst erstellen wie du möchtest. Dazu haben wir ein eigenes Web-Tool entwickelt, das Du jederzeit verwenden kannst.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Du kannst den Report jederzeit und so oft selbst erstellen wie du möchtest. Dazu haben wir ein eigenes Web-Tool entwickelt, das Du jederzeit verwenden kannst.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Wie viele Reports kann ich pro Monat generieren?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Du kannst so viele Reports generieren wie Du möchtest. Es gibt keine Begrenzung.</p>
+                            <p class="text-gray-500 leading-relaxed">Du kannst so viele Reports generieren wie Du möchtest. Es gibt keine Begrenzung.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Kann ich die Reihenfolge der Daten/Graphen im Report ändern?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Ab dem Agentur-Paket kannst du die Reihenfolge der Daten im Report beliebig ändern. Sprich uns einfach an und wir passen den Report nach Deinen Wünschen an.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Ab dem Agentur-Paket kannst du die Reihenfolge der Daten im Report beliebig ändern. Sprich uns einfach an und wir passen den Report nach Deinen Wünschen an.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Kann ich ein eigenes Logo verwenden?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Ab dem Agentur-Paket kannst du ein eigenes Logo verwenden. Sende uns dazu bitte eine E-Mail mit Deinem Logo und wir passen den Report nach Deinen Wünschen an.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Ab dem Agentur-Paket kannst du ein eigenes Logo verwenden. Sende uns dazu bitte eine E-Mail mit Deinem Logo und wir passen den Report nach Deinen Wünschen an.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Kann ich meine eigenen Farben verwenden?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Ab dem Agentur-Paket kannst du Deine eigenen Farben verwenden. Sende uns dazu bitte eine E-Mail und wir kümmern uns darum.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Ab dem Agentur-Paket kannst du Deine eigenen Farben verwenden. Sende uns dazu bitte eine E-Mail und wir kümmern uns darum.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Wie viele Hoster kann ich pro Podcast anbinden?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Beliebig viele.</p>
+                            <p class="text-gray-500 leading-relaxed">Beliebig viele.</p>
                         </div>
                     </details>
-                    <details class="faq-card mb-4 p-6">
+                    <details class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all mb-4 p-6">
                         <summary class="font-bold cursor-pointer text-lg text-gray-900 hover:text-blue-600 transition-colors">
                             Ist eine Pausierung möglich?
                         </summary>
                         <div class="mt-4 pt-4 border-t border-gray-100">
-                            <p class="text-modern-gray leading-relaxed">Ja. Du kannst Deinen Account jederzeit pausieren. Dazu schreibst Du uns einfach eine kurze Mail.</p>
+                            <p class="text-gray-500 leading-relaxed">Ja. Du kannst Deinen Account jederzeit pausieren. Dazu schreibst Du uns einfach eine kurze Mail.</p>
                         </div>
                     </details>
                 </div>
@@ -831,7 +728,7 @@
             <div class="relative py-20 px-4 lg:p-20">
                 <div class="max-w-lg mx-auto text-center">
                     <div class="text-center">
-                        <a class="inline-block text-white modern-btn modern-btn-large mb-6" href="https://connect.openpodcast.app">Podcast verbinden</a>
+                        <a class="inline-block text-white bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl font-semibold text-xl px-10 py-5 hover:shadow-xl transition-all mb-6" href="https://connect.openpodcast.app">Podcast verbinden</a>
                         <p class="text-blueGray-600 text-lg">
                             Oder
                             <a href="https://cal.com/openpodcast/demo" class="text-blue-600 underline hover:text-blue-700">vereinbare einen Termin mit uns</a>
