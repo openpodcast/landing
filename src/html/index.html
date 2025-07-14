@@ -77,45 +77,159 @@
                         </a>
                     </div>
                 </div>
-                <div class="container px-4 mx-auto my-24">
-                    <div class="flex flex-wrap lg:flex-nowrap gap-4">
-                        <div class="flex w-full lg:w-1/2 lg:max-w-lg lg:h-128 px-4 lg:pl-16 mb-12 lg:mb-0">
-                            <div class="my-auto mx-auto pt-8 lg:pt-0 max-w-2xl lg:max-w-lg">
-                                <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading">
-                                    <span>Alle Daten für die</span>
-                                    <span class="text-blue-600">Formatentwicklung</span>
-                                    .
-                                </h2>
-                                <p class="text-blueGray-400 leading-loose mb-6">Wer hört wo? Geo- und Soziodemographische Daten wie Alter, Geschlecht und Stadt. Wir liefern alle Kennzahlen für eure Content Strategie.</p>
-                                <a class="inline-block py-6 px-12 text-lg text-white font-bold bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">Jetzt loslegen</a>
+            </section>
+
+            <!-- Report Showcase Section -->
+            <section class="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+                <div class="container px-4 mx-auto max-w-7xl">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Deine <span class="text-blue-600">kompletten Podcast-Insights</span> auf einen Blick
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                            Professionelle PDF-Reports mit allen wichtigen Kennzahlen. Übersichtlich, verständlich und in deinem Corporate Design.
+                        </p>
+                        
+                        <!-- Color Theme Selector -->
+                        <div class="inline-flex items-center bg-white rounded-full p-2 shadow-lg mb-12">
+                            <span class="text-sm font-medium text-gray-700 px-4">Design-Variante:</span>
+                            <button class="theme-btn active w-8 h-8 rounded-full bg-green-500 mx-1 border-2 border-white shadow-md" data-color="green"></button>
+                            <button class="theme-btn w-8 h-8 rounded-full bg-yellow-500 mx-1 border-2 border-white shadow-md" data-color="yellow"></button>
+                            <button class="theme-btn w-8 h-8 rounded-full bg-blue-500 mx-1 border-2 border-white shadow-md" data-color="blue"></button>
+                        </div>
+                    </div>
+
+                    <!-- Report Features Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                        <!-- Overview Section -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="overview-img" class="w-full h-48 object-cover" src="/reports/green-01.jpg" alt="Podcast Overview">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">📊 Gesamtübersicht</h3>
+                                <p class="text-gray-600">Alle wichtigen Zahlen auf einen Blick: Downloads, Hörer und Hörzeit über alle Plattformen hinweg.</p>
                             </div>
                         </div>
-                        <div class="relative w-full lg:w-1/2 my-12 lg:my-0">
-                            <img class="mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/audience_growth_portrait.jpg" alt="audience_growth_portrait">
-                            <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 -z-10" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
-                            <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 -z-10" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
+
+                        <!-- Growth Charts -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="growth-img" class="w-full h-48 object-cover" src="/reports/green-02.jpg" alt="Growth Analysis">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">📈 Wachstumstrends</h3>
+                                <p class="text-gray-600">Verfolge dein Podcast-Wachstum über Zeit mit detaillierten Diagrammen und Trends.</p>
+                            </div>
+                        </div>
+
+                        <!-- Demographics -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="demographics-img" class="w-full h-48 object-cover" src="/reports/green-04.jpg" alt="Demographics">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">👥 Zielgruppen-Analyse</h3>
+                                <p class="text-gray-600">Verstehe deine Hörer: Alter, Geschlecht und geografische Verteilung deiner Audience.</p>
+                            </div>
+                        </div>
+
+                        <!-- Episode Performance -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="episode-img" class="w-full h-48 object-cover" src="/reports/green-08.jpg" alt="Episode Performance">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">🎧 Episoden-Performance</h3>
+                                <p class="text-gray-600">Detaillierte Durchhörrate-Analysen zeigen dir genau, wo deine Hörer ein- und aussteigen.</p>
+                            </div>
+                        </div>
+
+                        <!-- Geographic Data -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="geographic-img" class="w-full h-48 object-cover" src="/reports/green-06.jpg" alt="Geographic Data">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">🌍 Geografische Verteilung</h3>
+                                <p class="text-gray-600">Entdecke, aus welchen Ländern und Regionen deine Hörer kommen.</p>
+                            </div>
+                        </div>
+
+                        <!-- Top Episodes -->
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div class="aspect-w-16 aspect-h-10">
+                                <img id="top-episodes-img" class="w-full h-48 object-cover" src="/reports/green-17.jpg" alt="Top Episodes">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">🏆 Top-Episoden</h3>
+                                <p class="text-gray-600">Sieh sofort, welche Episoden am besten performen und lerne von deinen Erfolgen.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Und noch viel mehr!</h3>
+                            <p class="text-lg text-gray-600 mb-6">
+                                18 detaillierte Report-Seiten mit Follower-Entwicklung, Plattform-Vergleichen, 
+                                Episoden-spezifischen Analysen und vielem mehr.
+                            </p>
+                            <a class="inline-block py-6 px-12 text-lg text-white font-bold bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1" href="https://connect.openpodcast.app/">
+                                Kostenlosen Report erstellen
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-16 md:py-32 overflow-x-hidden bg-gray-50">
-                <div class="container px-4 mx-auto">
-                    <div class="flex flex-wrap lg:flex-nowrap gap-4">
-                        <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0">
-                            <img class="mx-auto rounded-xl w-full z-10 shadow-2xl" src="/images/apple_spotify_portrait.jpg" alt="apple_spotify_portrait">
-                            <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12 -z-10" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
-                            <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12 -z-10" src="/metis-assets/elements/blob-tear.svg" alt="blob-tear">
+            <!-- Platform Integration Section -->
+            <section class="py-20 bg-white">
+                <div class="container px-4 mx-auto max-w-6xl">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            <span class="text-blue-600">Alle großen Plattformen</span> automatisch integriert
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Spotify, Apple Podcasts, YouTube, Podigee, Anchor und mehr – wir sammeln vollautomatisch 
+                            tagesaktuelle Daten von allen wichtigen Podcast-Plattformen.
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/spotify.svg" alt="Spotify">
+                            <h3 class="font-bold text-gray-900">Spotify</h3>
+                            <p class="text-sm text-gray-600">Komplett-Zugang zu allen Statistiken</p>
                         </div>
-                        <div class="flex order-1 lg:order-0 w-full lg:w-1/2 lg:h-128 lg:max-w-lg lg:ml-auto px-4 lg:pr-24 xl:pr-4">
-                            <div class="my-auto mx-auto pt-8 lg:pt-0 max-w-2xl lg:max-w-lg">
-                                <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading">
-                                    <span class="text-blue-600">Podigee, Anchor, YouTube, Spotify Charts?</span>
-                                    <span>– kein Problem.</span>
-                                </h2>
-                                <p class="text-blueGray-400 leading-loose mb-6">Wir importieren vollautomatisiert tagesaktuelle Daten aller großen Podcast Plattformen. Einfach, schnell und verständlich. Natürlich DSVGO/GDPR konform.</p>
-                                <a class="inline-block py-4 px-8 text-base text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded" href="https://connect.openpodcast.app/">Zur Anmeldung</a>
-                            </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/apple.svg" alt="Apple Podcasts">
+                            <h3 class="font-bold text-gray-900">Apple Podcasts</h3>
+                            <p class="text-sm text-gray-600">Detaillierte Hörer-Analysen</p>
                         </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/anchor.svg" alt="Anchor">
+                            <h3 class="font-bold text-gray-900">Anchor & YouTube</h3>
+                            <p class="text-sm text-gray-600">Automatische Daten-Synchronisation</p>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/podigee.png" alt="Podigee">
+                            <h3 class="font-bold text-gray-900">Weitere Hoster</h3>
+                            <p class="text-sm text-gray-600">Podigee, RSS-Feeds und mehr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="inline-flex items-center bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-6">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-green-700 font-medium">DSGVO/GDPR konform • Höchste Datensicherheit</span>
+                        </div>
+                        <br>
+                        <a class="inline-block py-6 px-12 text-lg text-white font-bold bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">
+                            Podcast jetzt verbinden
+                        </a>
                     </div>
                 </div>
             </section>
@@ -885,6 +999,55 @@
                 s.parentNode.insertBefore(g, s);
             })();
 </script>
+
+<!-- Color Theme Switcher Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const reportImages = {
+            'overview-img': { green: 'green-01.jpg', yellow: 'yellow-01.jpg', blue: 'blue-01.jpg' },
+            'growth-img': { green: 'green-02.jpg', yellow: 'yellow-02.jpg', blue: 'blue-02.jpg' },
+            'demographics-img': { green: 'green-04.jpg', yellow: 'yellow-04.jpg', blue: 'blue-04.jpg' },
+            'episode-img': { green: 'green-08.jpg', yellow: 'yellow-08.jpg', blue: 'blue-08.jpg' },
+            'geographic-img': { green: 'green-06.jpg', yellow: 'yellow-06.jpg', blue: 'blue-06.jpg' },
+            'top-episodes-img': { green: 'green-17.jpg', yellow: 'yellow-17.jpg', blue: 'blue-17.jpg' }
+        };
+
+        themeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const selectedColor = this.getAttribute('data-color');
+                
+                // Update active state
+                themeButtons.forEach(btn => {
+                    btn.classList.remove('ring-4', 'ring-offset-2');
+                    if (btn === this) {
+                        btn.classList.add('ring-4', 'ring-offset-2');
+                        if (selectedColor === 'green') btn.classList.add('ring-green-300');
+                        if (selectedColor === 'yellow') btn.classList.add('ring-yellow-300');
+                        if (selectedColor === 'blue') btn.classList.add('ring-blue-300');
+                    } else {
+                        btn.classList.remove('ring-green-300', 'ring-yellow-300', 'ring-blue-300');
+                    }
+                });
+                
+                // Update all report images
+                Object.keys(reportImages).forEach(imageId => {
+                    const img = document.getElementById(imageId);
+                    if (img && reportImages[imageId][selectedColor]) {
+                        img.src = `/reports/${reportImages[imageId][selectedColor]}`;
+                    }
+                });
+            });
+        });
+        
+        // Set initial state for green theme
+        const greenButton = document.querySelector('[data-color="green"]');
+        if (greenButton) {
+            greenButton.classList.add('ring-4', 'ring-offset-2', 'ring-green-300');
+        }
+    });
+</script>
+
 <noscript>
     <p>
         <img src="https://piwik.inlupus.at/matomo.php?idsite=19&amp;rec=1" style="border: 0" alt="matomo">
