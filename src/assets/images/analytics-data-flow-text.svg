@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1000 280"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="analytics-data-flow-text.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2888996"
+     inkscape:cx="482.58219"
+     inkscape:cy="139.65401"
+     inkscape:window-width="2056"
+     inkscape:window-height="1257"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg15" />
+  <!-- Podcast Data -->
+  <!-- Arrow 1 -->
+  <!-- JSON API -->
+  <!-- CSV Export -->
+  <!-- MCP Integration -->
+  <!-- Arrow 2 -->
+  <!-- Custom Database -->
+  <!-- Claude/ChatGPT -->
+  <!-- Jupyter Notebook -->
+  <!-- Custom Tools -->
+  <!-- Arrow 3 -->
+  <!-- Insights -->
+  <rect
+     x="105"
+     y="100"
+     width="120"
+     height="80"
+     rx="12"
+     fill="#10b981"
+     stroke="#059669"
+     stroke-width="1"
+     id="rect1" />
+  <text
+     x="165"
+     y="135"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="600"
+     id="text1"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Podcast</text>
+  <text
+     x="165"
+     y="155"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="600"
+     id="text2"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Daten</text>
+  <path
+     d="m 235,140 q 20,0 40,0"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path2" />
+  <rect
+     x="285"
+     y="40"
+     width="100"
+     height="60"
+     rx="8"
+     fill="#3b82f6"
+     stroke="#2563eb"
+     stroke-width="1"
+     id="rect2" />
+  <text
+     x="335"
+     y="75"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     font-weight="600"
+     id="text3"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">JSON API</text>
+  <rect
+     x="285"
+     y="110"
+     width="100"
+     height="60"
+     rx="8"
+     fill="#0ea5e9"
+     stroke="#0284c7"
+     stroke-width="1"
+     id="rect3" />
+  <text
+     x="335"
+     y="145"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="12px"
+     font-weight="600"
+     id="text4"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">CSV Export</text>
+  <rect
+     x="285"
+     y="180"
+     width="100"
+     height="60"
+     rx="8"
+     fill="#06b6d4"
+     stroke="#0891b2"
+     stroke-width="1"
+     id="rect4" />
+  <text
+     x="335"
+     y="210"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text5"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">MCP</text>
+  <text
+     x="335"
+     y="225"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text6"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Integration</text>
+  <path
+     d="m 395,140 q 30,0 60,0"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path6" />
+  <rect
+     x="465"
+     y="75"
+     width="110"
+     height="60"
+     rx="8"
+     fill="#8b5cf6"
+     stroke="#7c3aed"
+     stroke-width="1"
+     id="rect6" />
+  <text
+     x="520"
+     y="105"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text7"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Custom</text>
+  <text
+     x="520"
+     y="120"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text8"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Database</text>
+  <rect
+     x="465"
+     y="145"
+     width="110"
+     height="60"
+     rx="8"
+     fill="#a855f7"
+     stroke="#9333ea"
+     stroke-width="1"
+     id="rect8" />
+  <text
+     x="520"
+     y="180"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text9"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Claude/ChatGPT</text>
+  <rect
+     x="585"
+     y="75"
+     width="110"
+     height="60"
+     rx="8"
+     fill="#c084fc"
+     stroke="#a855f7"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="640"
+     y="105"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text10"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Jupyter</text>
+  <text
+     x="640"
+     y="120"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text11"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Notebook</text>
+  <rect
+     x="585"
+     y="145"
+     width="110"
+     height="60"
+     rx="8"
+     fill="#d946ef"
+     stroke="#c026d3"
+     stroke-width="1"
+     id="rect11" />
+  <text
+     x="640"
+     y="175"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text12"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Custom</text>
+  <text
+     x="640"
+     y="190"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="11px"
+     font-weight="600"
+     id="text13"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Tools</text>
+  <path
+     d="m 705,140 q 30,0 60,0"
+     stroke="#9ca3af"
+     stroke-width="2"
+     fill="none"
+     marker-end="url(#arrowhead)"
+     id="path13" />
+  <rect
+     x="775"
+     y="100"
+     width="120"
+     height="80"
+     rx="12"
+     fill="#f59e0b"
+     stroke="#d97706"
+     stroke-width="1"
+     id="rect13" />
+  <text
+     x="835"
+     y="143.91016"
+     text-anchor="middle"
+     fill="#ffffff"
+     font-size="14px"
+     font-weight="600"
+     id="text14"
+     style="-inkscape-font-specification:'Inter, Bold';font-family:Inter;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.78571415px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">Analytics</text>
+  <!-- Arrow marker definition -->
+  <defs
+     id="defs15">
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#9CA3AF"
+         id="polygon15" />
+    </marker>
+  </defs>
+</svg>

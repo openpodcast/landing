@@ -785,7 +785,7 @@
             <div class="container px-4 mx-auto max-w-6xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Für <span class="text-indigo-600">Data Scientists</span> & Entwickler
+                        Für <span class="text-blue-600">Analytics-Teams</span> & Entwickler
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                         Rohzugriff auf deine Podcast-Daten für eigene Analysen, KI-Integration und Custom-Dashboards. 
@@ -794,64 +794,15 @@
                 </div>
 
                 <!-- Data Flow Diagram -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-16">
-                    <svg viewBox="0 0 800 200" class="w-full h-auto">
-                        <!-- Podcast Data -->
-                        <g transform="translate(50, 50)">
-                            <rect x="0" y="0" width="120" height="80" rx="12" fill="#10B981" stroke="#059669" stroke-width="2"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Podcast</text>
-                            <text x="60" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Daten</text>
-                        </g>
-                        
-                        <!-- Arrow 1 -->
-                        <path d="M 180 90 Q 200 90 220 90" stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        
-                        <!-- API/CSV -->
-                        <g transform="translate(230, 30)">
-                            <rect x="0" y="0" width="120" height="120" rx="12" fill="#3B82F6" stroke="#2563EB" stroke-width="2"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="13" font-weight="bold">JSON API</text>
-                            <text x="60" y="55" text-anchor="middle" fill="white" font-size="13" font-weight="bold">CSV Export</text>
-                            <text x="60" y="75" text-anchor="middle" fill="white" font-size="13" font-weight="bold">MCP</text>
-                            <text x="60" y="95" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Integration</text>
-                        </g>
-                        
-                        <!-- Arrow 2 -->
-                        <path d="M 360 90 Q 380 90 400 90" stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        
-                        <!-- Analysis Tools -->
-                        <g transform="translate(410, 30)">
-                            <rect x="0" y="0" width="120" height="120" rx="12" fill="#8B5CF6" stroke="#7C3AED" stroke-width="2"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Python/R</text>
-                            <text x="60" y="50" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Jupyter</text>
-                            <text x="60" y="65" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Tableau</text>
-                            <text x="60" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Claude/GPT</text>
-                            <text x="60" y="95" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Custom Tools</text>
-                        </g>
-                        
-                        <!-- Arrow 3 -->
-                        <path d="M 540 90 Q 560 90 580 90" stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        
-                        <!-- Insights -->
-                        <g transform="translate(590, 50)">
-                            <rect x="0" y="0" width="120" height="80" rx="12" fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Custom</text>
-                            <text x="60" y="55" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Insights</text>
-                        </g>
-                        
-                        <!-- Arrow marker definition -->
-                        <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280"/>
-                            </marker>
-                        </defs>
-                    </svg>
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 mb-16">
+                    <img src="/images/analytics-data-flow.svg" alt="Analytics Data Flow Diagram" class="w-full h-auto">
                 </div>
 
                 <!-- Features Grid -->
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-16 h-16 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                             </svg>
                         </div>
@@ -860,7 +811,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-purple-50 border border-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
@@ -870,7 +821,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-green-50 border border-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
@@ -880,49 +831,15 @@
                     </div>
                 </div>
 
-                <!-- Use Cases -->
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Was unsere Data Scientists damit machen:</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Predictive Analytics</h4>
-                                <p class="text-gray-600">ML-Modelle zur Vorhersage von Hörerzahlen und optimalen Veröffentlichungszeiten</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Automatisierte Insights</h4>
-                                <p class="text-gray-600">KI-generierte Wochenberichte und Anomalieerkennung in Echtzeit</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Cross-Platform Analyse</h4>
-                                <p class="text-gray-600">Vergleichende Studien zwischen Spotify, Apple Podcasts und anderen Plattformen</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-2">Custom Dashboards</h4>
-                                <p class="text-gray-600">Jupyter Notebooks, Tableau-Integration und maßgeschneiderte Monitoring-Tools</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- CTA -->
                 <div class="text-center">
-                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl border border-blue-200 p-8 text-white">
                         <h3 class="text-2xl font-bold mb-4">Bereit für tiefere Analysen?</h3>
-                        <p class="text-lg mb-6 text-indigo-100">
-                            Erhalte vollen API-Zugriff, CSV-Exporte und MCP-Integration für deine Data Science Projekte.
+                        <p class="text-lg mb-6 text-blue-100">
+                            Erhalte vollen API-Zugriff, CSV-Exporte und MCP-Integration für deine Analytics-Projekte.
                         </p>
-                        <a href="mailto:info@openpodcast.dev?subject=Data Science API Zugang" class="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors">
+                        <a href="mailto:info@openpodcast.dev?subject=Analytics API Zugang" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-50 transition-colors">
                             Jetzt Zugang anfragen
                         </a>
                     </div>
