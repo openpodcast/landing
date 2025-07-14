@@ -1,1 +1,5 @@
 /wolfgang https://inlupus.at/30min
+/report/index.html /index.html 301
+/dashboard/index.html /index.html 301
+/report/ /index.html 301
+/dashboard/ /index.html 301
