@@ -22,8 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
       closeButton.style.cssText =
         "position:absolute; top:15px; right:35px; color:white; font-size:40px; font-weight:bold; cursor:pointer;";
 
-      // Set video source (replace with your actual video URL)
-      videoPlayer.src = "/videos/openpodcast.mp4";
+      // Set video source - try locale from URL, fallback to 'de'
+      const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+      const firstSegment = pathSegments[0];
+      const locale = (firstSegment && !firstSegment.includes('.')) ? firstSegment : 'de';
+      
+      videoPlayer.src = `/videos/openpodcast-${locale}.mp4`;
+      videoPlayer.addEventListener('error', () => {
+        if (locale !== 'de') videoPlayer.src = `/videos/openpodcast-de.mp4`;
+      });
 
       // Append elements
       videoModal.appendChild(videoPlayer);
