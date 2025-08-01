@@ -41,6 +41,22 @@
                 }, 2000);
             });
         }
+
+        function toggleCard(cardId) {
+            const content = document.getElementById(cardId + '-content');
+            const arrow = document.getElementById(cardId + '-arrow');
+            const header = document.getElementById(cardId + '-header');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.style.transform = 'rotate(180deg)';
+                header.classList.add('border-b', 'border-gray-100');
+            } else {
+                content.classList.add('hidden');
+                arrow.style.transform = 'rotate(0deg)';
+                header.classList.remove('border-b', 'border-gray-100');
+            }
+        }
         </script>
     </head>
     <body class="antialiased bg-body text-body font-body scroll-smooth" id="top">
@@ -81,15 +97,23 @@
                 <div class="container mx-auto max-w-5xl px-8">
                     
                     <!-- Spotify -->
-                    <div class="bg-white rounded-xl border border-gray-200 mb-20 overflow-hidden shadow-sm">
-                        <div class="flex items-center px-12 py-10 border-b border-gray-100">
-                            <svg class="w-10 h-10 mr-8" viewBox="0 0 168 168" fill="none">
-                                <path fill="#1ED760" d="M83.996 0.277C37.747 0.277 0.253 37.77 0.253 84.019c0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.249-37.49-83.742-83.744-83.742l0 0zm38.404 120.78c-1.5 2.46-4.72 3.24-7.18 1.73-19.662-12.01-44.414-14.73-73.564-8.07-2.809 0.64-5.609-1.12-6.249-3.93-0.643-2.81 1.11-5.61 3.926-6.25 31.9-7.291 59.263-4.15 81.337 9.34 2.46 1.51 3.24 4.72 1.73 7.18zm10.25-22.805c-1.89 3.075-5.91 4.045-8.98 2.155-22.51-13.839-56.823-17.846-83.448-9.764-3.453 1.043-7.1-0.903-8.148-4.35-1.04-3.453 0.907-7.093 4.354-8.143 30.413-9.228 68.222-4.758 94.072 11.127 3.07 1.89 4.04 5.91 2.15 8.976v-0.001zm0.88-23.744c-26.99-16.031-71.52-17.505-97.289-9.684-4.138 1.255-8.514-1.081-9.768-5.219-1.254-4.14 1.08-8.513 5.221-9.771 29.581-8.98 78.756-7.245 109.83 11.202 3.73 2.209 4.95 7.016 2.74 10.733-2.2 3.722-7.02 4.949-10.73 2.739z"/>
+                    <div class="bg-white rounded-xl border border-gray-200 mb-6 overflow-hidden shadow-sm">
+                        <button id="spotify-header" class="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleCard('spotify')" aria-expanded="false" aria-controls="spotify-content">
+                            <div class="flex items-center">
+                                <svg class="w-10 h-10 mr-6" viewBox="0 0 168 168" fill="none">
+                                    <path fill="#1ED760" d="M83.996 0.277C37.747 0.277 0.253 37.77 0.253 84.019c0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.249-37.49-83.742-83.744-83.742l0 0zm38.404 120.78c-1.5 2.46-4.72 3.24-7.18 1.73-19.662-12.01-44.414-14.73-73.564-8.07-2.809 0.64-5.609-1.12-6.249-3.93-0.643-2.81 1.11-5.61 3.926-6.25 31.9-7.291 59.263-4.15 81.337 9.34 2.46 1.51 3.24 4.72 1.73 7.18zm10.25-22.805c-1.89 3.075-5.91 4.045-8.98 2.155-22.51-13.839-56.823-17.846-83.448-9.764-3.453 1.043-7.1-0.903-8.148-4.35-1.04-3.453 0.907-7.093 4.354-8.143 30.413-9.228 68.222-4.758 94.072 11.127 3.07 1.89 4.04 5.91 2.15 8.976v-0.001zm0.88-23.744c-26.99-16.031-71.52-17.505-97.289-9.684-4.138 1.255-8.514-1.081-9.768-5.219-1.254-4.14 1.08-8.513 5.221-9.771 29.581-8.98 78.756-7.245 109.83 11.202 3.73 2.209 4.95 7.016 2.74 10.733-2.2 3.722-7.02 4.949-10.73 2.739z"/>
+                                </svg>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900">Spotify</h2>
+                                    <p class="text-gray-500 text-sm mt-1">Click to view connection steps</p>
+                                </div>
+                            </div>
+                            <svg id="spotify-arrow" class="w-6 h-6 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                            <h2 class="text-3xl font-bold text-gray-900">Spotify</h2>
-                        </div>
-                        <div class="px-12 py-12">
-                            <p class="text-gray-500 mb-12 text-xl leading-relaxed">Connect your Spotify account to Open Podcast for automated analytics reports. We only need read-only access to your analytics data.</p>
+                        </button>
+                        <div id="spotify-content" class="hidden px-8 py-6">
+                            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Connect your Spotify account to Open Podcast for automated analytics reports. We only need read-only access to your analytics data.</p>
                             
                             <div class="space-y-10">
                                 <div class="flex items-start">
@@ -171,15 +195,23 @@
                     </div>
 
                     <!-- Apple Podcasts -->
-                    <div class="bg-white rounded-xl border border-gray-200 mb-20 overflow-hidden shadow-sm">
-                        <div class="flex items-center px-12 py-10 border-b border-gray-100">
-                            <svg class="w-10 h-10 mr-8" viewBox="0 0 24 24" fill="none">
-                                <path fill="#A855F7" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24l1.42-1.42C8.59 14.23 8 13.19 8 12c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.19-.59 2.23-1.18 2.82l1.42 1.42C17.33 15.16 18 13.66 18 12c0-3.31-2.69-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                    <div class="bg-white rounded-xl border border-gray-200 mb-6 overflow-hidden shadow-sm">
+                        <button id="apple-header" class="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleCard('apple')" aria-expanded="false" aria-controls="apple-content">
+                            <div class="flex items-center">
+                                <svg class="w-10 h-10 mr-6" viewBox="0 0 24 24" fill="none">
+                                    <path fill="#A855F7" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24l1.42-1.42C8.59 14.23 8 13.19 8 12c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.19-.59 2.23-1.18 2.82l1.42 1.42C17.33 15.16 18 13.66 18 12c0-3.31-2.69-6-6-6zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                                </svg>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900">Apple Podcasts</h2>
+                                    <p class="text-gray-500 text-sm mt-1">Click to view connection steps</p>
+                                </div>
+                            </div>
+                            <svg id="apple-arrow" class="w-6 h-6 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                            <h2 class="text-3xl font-bold text-gray-900">Apple Podcasts</h2>
-                        </div>
-                        <div class="px-12 py-12">
-                            <p class="text-gray-500 mb-12 text-xl leading-relaxed">Connect your Apple Podcasts account to Open Podcast for automated analytics reports. We only need read-only access to your analytics data.</p>
+                        </button>
+                        <div id="apple-content" class="hidden px-8 py-6">
+                            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Connect your Apple Podcasts account to Open Podcast for automated analytics reports. We only need read-only access to your analytics data.</p>
                             
                             <div class="space-y-10">
                                 <div class="flex items-start">
@@ -256,13 +288,21 @@
                     </div>
 
                     <!-- Podigee -->
-                    <div class="bg-white rounded-xl border border-gray-200 mb-20 overflow-hidden shadow-sm">
-                        <div class="flex items-center px-12 py-10 border-b border-gray-100">
-                            <img src="/images/icons/podigee.png" alt="Podigee" class="w-10 h-10 mr-8 rounded">
-                            <h2 class="text-3xl font-bold text-gray-900">Podigee</h2>
-                        </div>
-                        <div class="px-12 py-12">
-                            <p class="text-gray-500 mb-12 text-xl leading-relaxed">Connect your Podigee account through our secure OAuth integration. We only need read-only access to your analytics data.</p>
+                    <div class="bg-white rounded-xl border border-gray-200 mb-6 overflow-hidden shadow-sm">
+                        <button id="podigee-header" class="w-full flex items-center justify-between px-8 py-6 text-left hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset" onclick="toggleCard('podigee')" aria-expanded="false" aria-controls="podigee-content">
+                            <div class="flex items-center">
+                                <img src="/images/icons/podigee.png" alt="Podigee" class="w-10 h-10 mr-6 rounded">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gray-900">Podigee</h2>
+                                    <p class="text-gray-500 text-sm mt-1">Click to view connection steps</p>
+                                </div>
+                            </div>
+                            <svg id="podigee-arrow" class="w-6 h-6 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="podigee-content" class="hidden px-8 py-6">
+                            <p class="text-gray-600 mb-8 text-lg leading-relaxed">Connect your Podigee account through our secure OAuth integration. We only need read-only access to your analytics data.</p>
                             
                             <div class="text-center mb-10">
                                 <a href="https://app.podigee.com/oauth/authorize?client_id=xi3va0R3RKcbVVCiiC7Kj1QXoNjkt2T5caKQFZEipQY&redirect_uri=https%3A%2F%2Fconnect.openpodcast.app%2Fauth%2Fv1%2Fpodigee%2Fcallback&response_type=code" 
