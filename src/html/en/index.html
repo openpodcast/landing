@@ -855,6 +855,109 @@
                     <img src="/images/analytics-data-flow.svg" alt="Analytics Data Flow Diagram" class="w-full h-auto">
                 </div>
 
+                <!-- Database Tables Section -->
+                <div class="mb-16">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Direct Database Access</h3>
+                        <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                            Use SQL queries for custom analyses of your podcast data. 
+                            Full access to all structured data tables.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <img src="/images/openpodcast-database-tables.jpg" 
+                             alt="Open Podcast Database Tables Overview" 
+                             class="w-full rounded-xl shadow-lg max-w-4xl mx-auto">
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-6">
+                            <h4 class="text-2xl font-bold text-gray-900">Available Data Tables</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 mt-1 mr-4">
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Episodes</h5>
+                                        <p class="text-gray-600">All episode metadata, publication dates, and performance metrics</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 mt-1 mr-4">
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Audience Metrics</h5>
+                                        <p class="text-gray-600">Demographic data, geographic distribution, and listener behavior</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 mt-1 mr-4">
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Platform Data</h5>
+                                        <p class="text-gray-600">Platform-specific metrics from Spotify, Apple Podcasts, and more</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 mt-1 mr-4">
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-gray-900">Time Series</h5>
+                                        <p class="text-gray-600">Time-based data for trend analysis and historical comparisons</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <h4 class="text-2xl font-bold text-gray-900">Example SQL Queries</h4>
+                            <div class="bg-gray-900 rounded-lg p-6">
+                                <code class="text-green-400 text-sm font-mono">
+                                    <div class="text-gray-500">-- Top 10 episodes by plays from Apple Podcasts data</div>
+                                    <div class="mt-2">SELECT</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;m.episode_id,</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;m.ep_name,</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;m.ep_collection_name,</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;m.ep_release_date,</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;SUM(d.aed_playscount) as total_plays</div>
+                                    <div>FROM openpodcast.appleEpisodeMetadata m</div>
+                                    <div>JOIN openpodcast.appleEpisodeDetails d</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;ON m.account_id = d.account_id AND m.episode_id = d.episode_id</div>
+                                    <div>GROUP BY m.episode_id, m.ep_name, m.ep_collection_name, m.ep_release_date</div>
+                                    <div>ORDER BY total_plays DESC</div>
+                                    <div>LIMIT 10;</div>
+                                </code>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                                <div class="flex items-start">
+                                    <svg class="w-6 h-6 text-blue-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-blue-800 font-medium">Enterprise Database Access</p>
+                                        <p class="text-blue-700 text-sm mt-1">
+                                            Full SQL access to all podcast data available for analytics teams and developers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- CTA -->
                 <div class="text-center">
                     <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl border border-blue-200 p-8 text-white">
