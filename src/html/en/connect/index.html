@@ -116,6 +116,40 @@
             document.getElementById('registration-error').classList.add('hidden');
         }
 
+        // Handle Podigee OAuth callback
+        function handlePodigeeCallback() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const authCode = urlParams.get('code');
+            const error = urlParams.get('error');
+            
+            if (authCode) {
+                // Successfully received OAuth code from Podigee
+                showPodigeeSuccess();
+                // Remove URL parameters from browser history
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } else if (error) {
+                showPodigeeError();
+                // Remove URL parameters from browser history  
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+        
+        function showPodigeeSuccess() {
+            const successDiv = document.getElementById('podigee-success');
+            const connectButton = document.getElementById('podigee-connect-button');
+            if (successDiv && connectButton) {
+                successDiv.classList.remove('hidden');
+                connectButton.classList.add('hidden');
+            }
+        }
+        
+        function showPodigeeError() {
+            const errorDiv = document.getElementById('podigee-error');
+            if (errorDiv) {
+                errorDiv.classList.remove('hidden');
+            }
+        }
+
         // Check if user is already registered when page loads
         document.addEventListener('DOMContentLoaded', function() {
             const apiKey = localStorage.getItem('openpodcast_api_key');
@@ -126,6 +160,9 @@
                 showPlatformCards();
                 hideRegistrationForm();
             }
+            
+            // Handle Podigee OAuth callback
+            handlePodigeeCallback();
         });
 
         // Handle registration form submission
@@ -466,8 +503,38 @@
                         <div id="podigee-content" class="hidden px-8 py-6">
                             <p class="text-gray-600 mb-8 text-lg leading-relaxed">Connect your Podigee account through our secure OAuth integration. We only need read-only access to your analytics data.</p>
                             
-                            <div class="text-center mb-10">
-                                <a href="https://app.podigee.com/oauth/authorize?client_id=xi3va0R3RKcbVVCiiC7Kj1QXoNjkt2T5caKQFZEipQY&redirect_uri=https%3A%2F%2Fconnect.openpodcast.app%2Fauth%2Fv1%2Fpodigee%2Fcallback&response_type=code" 
+                            <!-- Podigee Success Message -->
+                            <div id="podigee-success" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+                                <div class="flex items-center">
+                                    <div class="bg-green-100 rounded-full p-2 mr-4">
+                                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-800 mb-1">Podigee successfully connected!</h4>
+                                        <p class="text-green-700">Your Podigee account has been successfully linked to Open Podcast. We'll send you your first analytics report soon.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Podigee Error Message -->
+                            <div id="podigee-error" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+                                <div class="flex items-center">
+                                    <div class="bg-red-100 rounded-full p-2 mr-4">
+                                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-red-800 mb-1">Error connecting to Podigee</h4>
+                                        <p class="text-red-700">There was a problem connecting to Podigee. Please try again or contact us for assistance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="podigee-connect-button" class="text-center mb-10">
+                                <a href="https://app.podigee.com/oauth/authorize?client_id=xi3va0R3RKcbVVCiiC7Kj1QXoNjkt2T5caKQFZEipQY&redirect_uri=https%3A%2F%2Fopenpodcast.app%2Fen%2Fconnect%2F&response_type=code" 
                                    class="inline-flex items-center px-10 pt-4 pb-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-lg transition-colors duration-200">
                                     <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
@@ -476,7 +543,9 @@
                                 </a>
                             </div>
                             
-                            <p class="text-center text-gray-600 text-lg">This will redirect you to Podigee's secure login page to authorize Open Podcast access to your analytics.</p>
+                            <div id="podigee-connect-description">
+                                <p class="text-center text-gray-600 text-lg">This will redirect you to Podigee's secure login page to authorize Open Podcast access to your analytics.</p>
+                            </div>
                         </div>
                     </div>
 
