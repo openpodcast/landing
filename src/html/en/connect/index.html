@@ -30,133 +30,19 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
         <link rel="stylesheet" href="/css/tailwind/tailwind.min.css">
         <script src="/js/config.js"></script>
+        <script src="/js/connect.js"></script>
         <script>
-        function copyToClipboard(text, button) {
-            navigator.clipboard.writeText(text).then(function() {
-                const originalHTML = button.innerHTML;
-                button.innerHTML = '<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
-                button.classList.add('text-green-600');
-                setTimeout(function() {
-                    button.innerHTML = originalHTML;
-                    button.classList.remove('text-green-600');
-                }, 2000);
-            });
-        }
-
-        function toggleCard(cardId) {
-            const content = document.getElementById(cardId + '-content');
-            const arrow = document.getElementById(cardId + '-arrow');
-            const header = document.getElementById(cardId + '-header');
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                arrow.style.transform = 'rotate(180deg)';
-                header.classList.add('border-b', 'border-gray-100');
-            } else {
-                content.classList.add('hidden');
-                arrow.style.transform = 'rotate(0deg)';
-                header.classList.remove('border-b', 'border-gray-100');
-            }
-        }
-
-        async function registerUser(name, email) {
-            try {
-                const response = await fetch(window.OpenPodcastConfig.getRegisterUrl(), {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ name, email })
-                });
-                
-                const data = await response.json();
-                
-                if ((response.ok && data.success) || (response.status === 409 && data.data)) {
-                    // Store API key for future use (works for both new users and existing users)
-                    localStorage.setItem('openpodcast_api_key', data.data.apiKey);
-                    localStorage.setItem('openpodcast_user_id', data.data.userId);
-                    localStorage.setItem('openpodcast_user_name', data.data.name);
-                    
-                    // Show platform connection options
-                    showPlatformCards();
-                    hideRegistrationForm();
-                    
-                    return data;
-                } else {
-                    throw new Error(data.error || 'Registration failed');
-                }
-            } catch (error) {
-                console.error('Registration failed:', error);
-                throw error;
-            }
-        }
-
-        function showPlatformCards() {
-            // Update welcome message with user name
-            const userName = localStorage.getItem('openpodcast_user_name');
-            if (userName) {
-                document.getElementById('user-name').textContent = userName;
-            }
-            
-            document.getElementById('platform-cards').classList.remove('hidden');
-            document.getElementById('welcome-message').classList.remove('hidden');
-        }
-
-        function hideRegistrationForm() {
-            document.getElementById('registration-section').classList.add('hidden');
-        }
-
-        function showRegistrationError(message) {
-            const errorDiv = document.getElementById('registration-error');
-            errorDiv.textContent = message;
-            errorDiv.classList.remove('hidden');
-        }
-
-        function hideRegistrationError() {
-            document.getElementById('registration-error').classList.add('hidden');
-        }
-
-        // Check if user is already registered when page loads
+        // English language messages
+        const messages = {
+            fillAllFields: 'Please fill in all fields',
+            registering: 'Registering...',
+            registrationFailed: 'Registration failed. Please try again.',
+            getStarted: 'Get Started'
+        };
+        
+        // Initialize connect page when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            const apiKey = localStorage.getItem('openpodcast_api_key');
-            const userName = localStorage.getItem('openpodcast_user_name');
-            
-            if (apiKey && userName) {
-                document.getElementById('user-name').textContent = userName;
-                showPlatformCards();
-                hideRegistrationForm();
-            }
-        });
-
-        // Handle registration form submission
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('registration-form');
-            if (form) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('user-name-input').value.trim();
-                    const email = document.getElementById('user-email-input').value.trim();
-                    const submitButton = document.getElementById('register-button');
-                    
-                    if (!name || !email) {
-                        showRegistrationError('Please fill in all fields');
-                        return;
-                    }
-                    
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Registering...';
-                    hideRegistrationError();
-                    
-                    try {
-                        await registerUser(name, email);
-                    } catch (error) {
-                        showRegistrationError(error.message || 'Registration failed. Please try again.');
-                        submitButton.disabled = false;
-                        submitButton.textContent = 'Get Started';
-                    }
-                });
-            }
+            initConnectPage(messages);
         });
         </script>
     </head>
@@ -466,8 +352,38 @@
                         <div id="podigee-content" class="hidden px-8 py-6">
                             <p class="text-gray-600 mb-8 text-lg leading-relaxed">Connect your Podigee account through our secure OAuth integration. We only need read-only access to your analytics data.</p>
                             
-                            <div class="text-center mb-10">
-                                <a href="https://app.podigee.com/oauth/authorize?client_id=xi3va0R3RKcbVVCiiC7Kj1QXoNjkt2T5caKQFZEipQY&redirect_uri=https%3A%2F%2Fconnect.openpodcast.app%2Fauth%2Fv1%2Fpodigee%2Fcallback&response_type=code" 
+                            <!-- Podigee Success Message -->
+                            <div id="podigee-success" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+                                <div class="flex items-center">
+                                    <div class="bg-green-100 rounded-full p-2 mr-4">
+                                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-green-800 mb-1">Podigee successfully connected!</h4>
+                                        <p class="text-green-700">Your Podigee account has been successfully linked to Open Podcast. We'll send you your first analytics report soon.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Podigee Error Message -->
+                            <div id="podigee-error" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+                                <div class="flex items-center">
+                                    <div class="bg-red-100 rounded-full p-2 mr-4">
+                                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-red-800 mb-1">Error connecting to Podigee</h4>
+                                        <p class="text-red-700">There was a problem connecting to Podigee. Please try again or contact us for assistance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="podigee-connect-button" class="text-center mb-10">
+                                <a href="https://app.podigee.com/oauth/authorize?client_id=xi3va0R3RKcbVVCiiC7Kj1QXoNjkt2T5caKQFZEipQY&redirect_uri=https%3A%2F%2Fopenpodcast.app%2Fen%2Fconnect%2F&response_type=code" 
                                    class="inline-flex items-center px-10 pt-4 pb-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-lg transition-colors duration-200">
                                     <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
@@ -476,7 +392,9 @@
                                 </a>
                             </div>
                             
-                            <p class="text-center text-gray-600 text-lg">This will redirect you to Podigee's secure login page to authorize Open Podcast access to your analytics.</p>
+                            <div id="podigee-connect-description">
+                                <p class="text-center text-gray-600 text-lg">This will redirect you to Podigee's secure login page to authorize Open Podcast access to your analytics.</p>
+                            </div>
                         </div>
                     </div>
 
