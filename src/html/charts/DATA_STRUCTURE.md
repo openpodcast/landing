@@ -25,7 +25,7 @@ Example structure:
       "borderColor": "#3b82f6",
       "backgroundColor": gradient,
       "tension": 0.4,
-      "fill": true,
+      "fill": "start",
       "pointRadius": 4,
       "pointHoverRadius": 6,
       "pointBackgroundColor": "#3b82f6",

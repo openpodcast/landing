@@ -117,12 +117,6 @@
                 </div>
                 <p class="text-gray-500 mt-4 text-sm">No credit card required • 14-day free trial</p>
             </div>
-
-            <!-- Trust Badges -->
-            <div class="flex items-center justify-center gap-6 mt-8">
-                <img src="/images/gdpr_compliant.png" alt="GDPR Compliant" class="h-24 bg-white rounded-lg px-6 py-4">
-                <img src="/images/hosted_in_germany.png" alt="Hosted in Germany" class="h-24 bg-white rounded-lg px-6 py-4">
-            </div>
         </div>
 
         <!-- Footer -->
@@ -158,12 +152,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="border-t border-gray-200 pt-8 flex flex-col lg:flex-row items-center lg:justify-between gap-6">
+                <div class="border-t border-gray-200 pt-8 text-center">
                     <p class="text-sm text-gray-500">© 2025 Open Podcast</p>
-                    <div class="flex items-center gap-6">
-                        <img src="/images/gdpr_compliant.png" alt="GDPR Compliant" class="h-24 bg-white rounded-lg px-6 py-4">
-                        <img src="/images/hosted_in_germany.png" alt="Hosted in Germany" class="h-24 bg-white rounded-lg px-6 py-4">
-                    </div>
                 </div>
             </div>
         </footer>
@@ -172,10 +162,10 @@
             // Chart.js configuration
             const ctx = document.getElementById('chartCanvas').getContext('2d');
 
-            // Create gradient from top to bottom for fill (line at top, fades down to axis)
+            // Create gradient from top to bottom for fill (fades from top down)
             const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-            gradient.addColorStop(0, 'rgba(59, 130, 246, 0)');
-            gradient.addColorStop(1, 'rgba(59, 130, 246, 0.3)');
+            gradient.addColorStop(0, 'rgba(59, 130, 246, 0.3)');
+            gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
 
             const chartData = {{CHART_DATA_JSON}};
 

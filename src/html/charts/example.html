@@ -283,12 +283,6 @@
                 </div>
                 <p class="text-gray-500 mt-4 text-sm">No credit card required • 14-day free trial</p>
             </div>
-
-            <!-- Trust Badges -->
-            <div class="flex items-center justify-center gap-6 mt-8">
-                <img src="/images/gdpr_compliant.png" alt="GDPR Compliant" class="h-24 bg-white rounded-lg px-6 py-4">
-                <img src="/images/hosted_in_germany.png" alt="Hosted in Germany" class="h-24 bg-white rounded-lg px-6 py-4">
-            </div>
         </div>
 
         <!-- Footer -->
@@ -324,12 +318,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="border-t border-gray-200 pt-8 flex flex-col lg:flex-row items-center lg:justify-between gap-6">
+                <div class="border-t border-gray-200 pt-8 text-center">
                     <p class="text-sm text-gray-500">© 2025 Open Podcast</p>
-                    <div class="flex items-center gap-6">
-                        <img src="/images/gdpr_compliant.png" alt="GDPR Compliant" class="h-24 bg-white rounded-lg px-6 py-4">
-                        <img src="/images/hosted_in_germany.png" alt="Hosted in Germany" class="h-24 bg-white rounded-lg px-6 py-4">
-                    </div>
                 </div>
             </div>
         </footer>
@@ -337,21 +327,17 @@
         <script>
             // Chart.js configuration
             const ctx = document.getElementById('chartCanvas').getContext('2d');
-
-            // Create gradient from top to bottom for fill (line at top, fades down to axis)
-            const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-            gradient.addColorStop(0, 'rgba(59, 130, 246, 0)');
-            gradient.addColorStop(1, 'rgba(59, 130, 246, 0.3)');
-
+        
+            // ---- Initial dataset (backgroundColor will be replaced after layout) ----
             const chartData = {
                 labels: ["Nov 20", "Nov 27", "Dec 4", "Dec 11", "Dec 18", "Dec 25", "Jan 1", "Jan 8"],
                 datasets: [{
                     label: "US Technology Charts",
                     data: [25, 18, 15, 12, 10, 15, 12, 10],
                     borderColor: "#3b82f6",
-                    backgroundColor: gradient,
+                    backgroundColor: null, // gradient added later
                     tension: 0.4,
-                    fill: true,
+                    fill: 'start',
                     pointRadius: 4,
                     pointHoverRadius: 6,
                     pointBackgroundColor: "#3b82f6",
@@ -359,7 +345,8 @@
                     pointBorderWidth: 2
                 }]
             };
-
+        
+            // ---- Create chart first ----
             const chart = new Chart(ctx, {
                 type: 'line',
                 data: chartData,
@@ -368,9 +355,7 @@
                     maintainAspectRatio: false,
                     animation: false,
                     plugins: {
-                        legend: {
-                            display: false
-                        },
+                        legend: { display: false },
                         tooltip: {
                             mode: 'index',
                             intersect: false,
@@ -382,12 +367,8 @@
                             padding: 12,
                             displayColors: true,
                             callbacks: {
-                                title: function(context) {
-                                    return context[0].label;
-                                },
-                                label: function(context) {
-                                    return context.dataset.label + ': #' + context.parsed.y;
-                                }
+                                title: ctx => ctx[0].label,
+                                label: ctx => ctx.dataset.label + ': #' + ctx.parsed.y
                             }
                         }
                     },
@@ -397,18 +378,12 @@
                             beginAtZero: false,
                             ticks: {
                                 stepSize: 5,
-                                callback: function(value) {
-                                    return '#' + value;
-                                }
+                                callback: value => '#' + value
                             },
-                            grid: {
-                                color: '#f3f4f6'
-                            }
+                            grid: { color: '#f3f4f6' }
                         },
                         x: {
-                            grid: {
-                                display: false
-                            }
+                            grid: { display: false }
                         }
                     },
                     interaction: {
@@ -418,12 +393,33 @@
                     }
                 }
             });
-
-            // Table filtering
+        
+            // ---- Build gradient AFTER chart layout (correct fade direction) ----
+            function applyAreaGradient() {
+                const area = chart.chartArea;
+                if (!area) return; // layout not ready yet
+        
+                const gradient = ctx.createLinearGradient(0, area.top, 0, area.bottom);
+        
+                gradient.addColorStop(0, 'rgba(59, 130, 246, 0.28)'); // near the line
+                gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');    // fade downward
+        
+                chart.data.datasets[0].backgroundColor = gradient;
+                chart.update('none'); // no animation
+            }
+        
+            // Initial gradient
+            applyAreaGradient();
+        
+            // Reapply gradient when resized
+            new ResizeObserver(() => applyAreaGradient()).observe(chart.canvas);
+        
+        
+            // ---- Table filtering ----
             function filterTable(type) {
                 const rows = document.querySelectorAll('#chartTable tr');
                 const buttons = document.querySelectorAll('[onclick^="filterTable"]');
-
+        
                 // Update button styles
                 buttons.forEach(btn => {
                     btn.classList.remove('bg-blue-600', 'text-white');
@@ -431,7 +427,7 @@
                 });
                 event.target.classList.remove('bg-gray-100', 'text-gray-700');
                 event.target.classList.add('bg-blue-600', 'text-white');
-
+        
                 // Filter rows
                 rows.forEach(row => {
                     if (type === 'all') {
