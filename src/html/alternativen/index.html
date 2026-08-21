@@ -206,11 +206,28 @@
                 </div>
             </section>
 
-            <section class="py-16 md:py-20 bg-white">
+            <section id="termin" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 scroll-mt-8">
                 <div class="container px-4 mx-auto max-w-6xl">
-                    <div class="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                        <div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-widest text-blue-100 mb-3">Die Lücke schließen</p><h2 class="text-3xl md:text-4xl font-bold mb-4">Bring deinen Podcast-Stack in einem Report zusammen</h2><p class="text-lg text-blue-100">Verbinde einen Podcast kostenlos für 30 Tage. Deine Plattformen, Spezialtools und dein Hoster bleiben unverändert.</p></div>
-                        <a href="https://connect.openpodcast.app/" class="inline-flex flex-shrink-0 justify-center font-bold text-blue-700 bg-white hover:bg-blue-50 rounded-xl px-7 py-4 transition-colors">Podcast kostenlos verbinden</a>
+                    <div class="grid lg:grid-cols-3 gap-6 lg:gap-10 lg:items-end mb-10">
+                        <div class="lg:col-span-2">
+                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-4">Die Lücke gemeinsam schließen</p>
+                            <h2 class="text-3xl md:text-5xl font-bold mb-5">Wie passt Open Podcast in deinen Stack?</h2>
+                            <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Wähle direkt einen Termin aus. Wir schauen uns deine Plattformen, Reports und Datenwege an – unverbindlich und ohne vorbereitete Präsentation.</p>
+                        </div>
+                        <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                            <p class="font-bold text-gray-900 mb-2">Lieber direkt ausprobieren?</p>
+                            <p class="text-gray-600 mb-4">Verbinde einen Podcast 30 Tage kostenlos.</p>
+                            <a href="https://connect.openpodcast.app/" class="inline-flex font-bold text-blue-600 hover:text-blue-700">Podcast kostenlos verbinden →</a>
+                        </div>
+                    </div>
+                    <div class="p-2 md:p-4 bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden">
+                        <div data-cal-inline data-cal-link="openpodcast/demo" class="w-full min-h-[720px]" aria-label="Termin mit Open Podcast buchen">
+                            <noscript><div class="p-8 text-center"><p class="text-gray-600 mb-4">Für die eingebettete Terminbuchung wird JavaScript benötigt.</p><a href="https://cal.com/openpodcast/demo" class="font-bold text-blue-600">Termin auf Cal.com auswählen →</a></div></noscript>
+                        </div>
+                    </div>
+                    <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-sm text-gray-500">
+                        <p>Der Kalender wird von Cal.com geladen. Dabei gelten die <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Datenschutzbestimmungen von Cal.com</a>.</p>
+                        <a href="https://cal.com/openpodcast/demo" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-700 flex-shrink-0">In neuem Tab öffnen ↗</a>
                     </div>
                 </div>
             </section>
@@ -222,5 +239,6 @@
                 <div class="flex flex-wrap gap-x-6 gap-y-3 font-semibold"><a href="/" class="text-gray-600 hover:text-blue-600">Startseite</a><a href="/developers/" class="text-gray-600 hover:text-blue-600">Für Entwickler</a><a href="mailto:info@openpodcast.dev" class="text-gray-600 hover:text-blue-600">Kontakt</a></div>
             </div>
         </footer>
+        <script src="/js/cal-embed.js" defer></script>
     </body>
 </html>

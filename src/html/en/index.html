@@ -32,6 +32,7 @@
         <script src="/js/main.js" defer></script>
         <script src="/js/video.js" defer></script>
         <script src="/js/report-showcase.js" defer></script>
+        <script src="/js/cal-embed.js" defer></script>
     </head>
     <body class="antialiased bg-body text-body font-body" id="top">
         <div>
@@ -524,6 +525,32 @@
         </div>
     </section>
 
+    <section id="demo" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 scroll-mt-8">
+        <div class="container px-4 mx-auto max-w-6xl">
+            <div class="grid lg:grid-cols-3 gap-6 lg:gap-10 lg:items-end mb-10">
+                <div class="lg:col-span-2">
+                    <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-4">Personal demo</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-5">Let’s look at your podcast workflow</h2>
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">Choose a time directly below. We will show you Open Podcast using your platforms, reports, and questions—without obligation or a prepared sales presentation.</p>
+                </div>
+                <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                    <p class="font-bold text-gray-900 mb-2">Prefer to try it yourself?</p>
+                    <p class="text-gray-600 mb-4">Connect one podcast free for 30 days.</p>
+                    <a href="https://connect.openpodcast.app/" class="inline-flex font-bold text-blue-600 hover:text-blue-700">Connect your podcast free →</a>
+                </div>
+            </div>
+            <div class="p-2 md:p-4 bg-white border border-gray-200 rounded-3xl shadow-sm overflow-hidden">
+                <div data-cal-inline data-cal-link="openpodcast/demo" class="w-full min-h-[720px]" aria-label="Book a meeting with Open Podcast">
+                    <noscript><div class="p-8 text-center"><p class="text-gray-600 mb-4">JavaScript is required for the embedded booking calendar.</p><a href="https://cal.com/openpodcast/demo" class="font-bold text-blue-600">Choose a time on Cal.com →</a></div></noscript>
+                </div>
+            </div>
+            <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-sm text-gray-500">
+                <p>The calendar is loaded from Cal.com and is subject to the <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Cal.com privacy policy</a>.</p>
+                <a href="https://cal.com/openpodcast/demo" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-700 flex-shrink-0">Open in a new tab ↗</a>
+            </div>
+        </div>
+    </section>
+
     <footer id="footer" class="bg-gradient-to-br from-blue-700 to-blue-900 text-white">
         <div class="container px-4 mx-auto max-w-6xl">
             <section class="py-14 md:py-20 border-b border-blue-500" aria-labelledby="footer-cta-title">
@@ -531,11 +558,10 @@
                     <div class="lg:col-span-3">
                         <p class="text-sm font-semibold uppercase tracking-widest text-blue-200 mb-3">Get started</p>
                         <h2 id="footer-cta-title" class="text-3xl md:text-4xl font-bold leading-tight mb-4">Your podcast numbers deserve a clear report.</h2>
-                        <p class="text-lg text-blue-100 leading-relaxed max-w-2xl">Connect your podcast in minutes or get to know Open Podcast in a personal demo.</p>
+                        <p class="text-lg text-blue-100 leading-relaxed max-w-2xl">Connect your podcast in minutes and try Open Podcast free for 30 days.</p>
                     </div>
-                    <div class="lg:col-span-2 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 lg:items-stretch xl:justify-end">
-                        <a class="inline-flex justify-center items-center bg-white text-blue-700 rounded-xl font-bold px-7 py-4" href="https://connect.openpodcast.app">Connect podcast</a>
-                        <a class="inline-flex justify-center items-center text-white border border-blue-300 rounded-xl font-bold px-7 py-4" href="https://cal.com/openpodcast/demo">Book a demo</a>
+                    <div class="lg:col-span-2 flex lg:justify-end">
+                        <a class="inline-flex justify-center items-center bg-white text-blue-700 rounded-xl font-bold px-7 py-4" href="https://connect.openpodcast.app">Connect your podcast free</a>
                     </div>
                 </div>
             </section>
