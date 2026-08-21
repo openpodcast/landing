@@ -37,6 +37,19 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    const backToTop = document.querySelector('.back-to-top');
+
+    if (backToTop) {
+        const updateBackToTop = function () {
+            const isVisible = window.scrollY > 600;
+            backToTop.classList.toggle('opacity-0', !isVisible);
+            backToTop.classList.toggle('pointer-events-none', !isVisible);
+        };
+
+        window.addEventListener('scroll', updateBackToTop, { passive: true });
+        updateBackToTop();
+    }
 });
 
 function scrollToBottom() {

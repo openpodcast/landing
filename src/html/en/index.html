@@ -34,58 +34,74 @@
     </head>
     <body class="antialiased bg-body text-body font-body" id="top">
         <div>
-            <section class="xl:bg-contain bg-top bg-no-repeat flex flex-col bg-gradient-to-br from-blue-500 to-blue-700">
+            <section class="bg-gradient-to-br from-blue-500 to-blue-700">
                 <div class="container px-4 mx-auto">
-                    <nav class="flex justify-between items-center py-6">
-                        <a class="text-3xl font-semibold leading-none" href="/en/">
-                            <img class="w-56" src="/images/logo-white.svg" alt="Open Podcast">
+                    <nav class="flex items-center justify-between py-5 lg:py-6" aria-label="Main navigation">
+                        <a class="flex-shrink-0" href="/en/" aria-label="Open Podcast homepage">
+                            <img class="w-44 sm:w-52" src="/images/logo-white.svg" alt="Open Podcast">
                         </a>
-                        
-                        <!-- Language Switcher -->
-                        <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2">
-                            <a href="/" class="text-white/70 font-medium text-sm">DE</a>
-                            <span class="text-white/50">|</span>
-                            <span class="text-white font-medium text-sm">EN</span>
+
+                        <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-blue-100">
+                            <a href="#product" class="hover:text-white transition-colors">Product</a>
+                            <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                            <a href="#security" class="hover:text-white transition-colors">Security</a>
+                            <a href="#developers" class="hover:text-white transition-colors">For Developers</a>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <a href="https://connect.openpodcast.app/" class="hidden md:inline-flex text-sm font-semibold text-white hover:text-blue-100 transition-colors">Log in</a>
+                            <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2" aria-label="Choose language">
+                                <a href="/" class="text-white/70 font-medium text-sm hover:text-white transition-colors" lang="de">DE</a>
+                                <span class="text-white/50" aria-hidden="true">|</span>
+                                <span class="text-white font-medium text-sm" aria-current="page">EN</span>
+                            </div>
                         </div>
                     </nav>
-                    <div class="pt-12 pb-16 text-center">
-                        <div class="max-w-2xl mx-auto md:mt-32 md:mb-16">
-                            <h1 class="text-5xl md:text-6xl mb-6 font-bold font-heading text-white leading-tight">Automated PDF Reports for Your Podcast</h1>
-                            <p class="text-xl text-blue-100 leading-relaxed mb-8">All <strong>Spotify</strong>, <strong>Apple</strong>, and <strong>YouTube</strong> data including listener retention and demographics at a glance. <strong>No setup required.</strong> Get automated email reports weekly or monthly.</p>
-                            <div class="mx-auto mb-12">
-                                <a class="inline-block font-bold text-xl px-10 py-5 text-blue-700 bg-gradient-to-br from-white to-gray-100 border-2 border-white/30 rounded-xl" href="https://connect.openpodcast.app/">Start Free</a>
-                                <p class="text-blue-100 mt-3 text-sm">✓ 14 days free trial • ✓ No setup required</p>
+
+                    <div class="pt-12 md:pt-20 lg:pt-24 pb-12 md:pb-16 text-center">
+                        <div class="max-w-4xl mx-auto mb-12 md:mb-16">
+                            <p class="mb-5 text-sm md:text-base font-semibold uppercase tracking-widest text-blue-100">Podcast analytics, automatically prepared</p>
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 font-bold font-heading text-white leading-tight">All your podcast numbers. One automated report.</h1>
+                            <p class="max-w-3xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed mb-8">Connect Spotify, Apple Podcasts, YouTube, and your host once. Open Podcast combines reach, demographics, and episode performance into clear PDF reports delivered automatically by email.</p>
+                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <a class="inline-flex w-full sm:w-auto justify-center font-bold text-lg px-8 py-4 text-blue-700 bg-white rounded-xl shadow-lg hover:bg-blue-50 hover:shadow-xl transition-all" href="https://connect.openpodcast.app/">Connect your podcast free</a>
+                                <a class="inline-flex w-full sm:w-auto justify-center font-bold text-lg px-8 py-4 text-white border-2 border-white/50 rounded-xl hover:bg-white/10 hover:border-white transition-all" href="#product">View a sample report</a>
                             </div>
+                            <p class="text-blue-100 mt-4 text-sm">30 days free · No credit card · Read-only access</p>
                         </div>
-                        <div class="relative max-w-6xl mx-auto hero-container">
-                            <div class="relative">
-                                <img src="/images/report/hero-video.png" alt="hero-video" class="cursor-pointer md:rounded-3xl w-full">
-                                <div class="absolute inset-0 bg-black bg-opacity-50 md:rounded-3xl"></div>
+
+                        <div class="relative max-w-5xl mx-auto hero-container">
+                            <div class="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl">
+                                <img src="/images/report/hero-video.png" alt="Preview of an automatically generated podcast report" class="w-full">
+                                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
                             </div>
-                            <div id="playButtonContainer" class="absolute inset-0 flex items-center justify-center cursor-pointer z-10">
-                                <div class="w-20 h-20 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center">
-                                    <img src="/images/play-button.svg" alt="Play">
-                                </div>
-                            </div>
+                            <button id="playButtonContainer" type="button" aria-label="Play product video" class="group absolute inset-0 flex items-center justify-center z-10 rounded-2xl md:rounded-3xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-blue-700">
+                                <span class="w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-xl flex items-center justify-center group-hover:scale-105 transition-transform" aria-hidden="true">
+                                    <img src="/images/play-button.svg" alt="">
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="py-24">
-                <div class="container px-4 mx-auto">
-                    <h2 class="text-3xl md:text-4xl mb-12 font-bold text-center text-gray-900">Our Customers Love It</h2>
-                    <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-8 gap-4">
-                        <a href="https://www.media-lab.de/de/media-tech-lab" class="block h-20">
-                            <img class="h-full w-auto" src="/images/ML-Logo.webp" alt="ML-Logo">
+            <section class="py-14 md:py-16 bg-white border-b border-gray-100" aria-labelledby="customer-proof-heading">
+                <div class="container px-4 mx-auto max-w-6xl">
+                    <div class="text-center mb-8">
+                        <p class="text-sm font-semibold uppercase tracking-widest text-blue-600 mb-3">Built for real podcast workflows</p>
+                        <h2 id="customer-proof-heading" class="text-2xl md:text-3xl font-bold text-gray-900">Trusted by podcast teams and media projects</h2>
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+                        <a href="https://www.media-lab.de/de/media-tech-lab" class="h-24 md:h-28 flex items-center justify-center rounded-xl border border-gray-100 bg-gray-50 px-5 hover:border-blue-200 hover:bg-blue-50 transition-colors" aria-label="Visit Media Tech Lab">
+                            <img class="max-h-14 md:max-h-16 w-auto max-w-full object-contain" src="/images/ML-Logo.webp" alt="Media Tech Lab">
                         </a>
-                        <a href="https://engineeringkiosk.dev" class="block h-20">
-                            <img class="h-full w-auto" src="/images/engineering-kiosk-logo.png" alt="engineering-kiosk-logo">
+                        <a href="https://engineeringkiosk.dev" class="h-24 md:h-28 flex items-center justify-center rounded-xl border border-gray-100 bg-gray-50 px-5 hover:border-blue-200 hover:bg-blue-50 transition-colors" aria-label="Visit Engineering Kiosk">
+                            <img class="max-h-14 md:max-h-16 w-auto max-w-full object-contain" src="/images/engineering-kiosk-logo.png" alt="Engineering Kiosk">
                         </a>
-                        <a href="https://openpodcast.dev#podcast" class="block h-20">
-                            <img class="h-full w-auto" src="/images/open-podcast-small-transparent.png" alt="open-podcast-small-transparent">
+                        <a href="https://openpodcast.dev#podcast" class="h-24 md:h-28 flex items-center justify-center rounded-xl border border-gray-100 bg-gray-50 px-5 hover:border-blue-200 hover:bg-blue-50 transition-colors" aria-label="Visit the Open Podcast podcast">
+                            <img class="max-h-14 md:max-h-16 w-auto max-w-full object-contain" src="/images/open-podcast-small-transparent.png" alt="Open Podcast podcast">
                         </a>
-                        <a href="https://www.alexanderfreise.com/" class="block h-20">
-                            <img class="h-full w-auto" src="/images/freise.jpg" alt="freise">
+                        <a href="https://www.alexanderfreise.com/" class="h-24 md:h-28 flex items-center justify-center rounded-xl border border-gray-100 bg-gray-50 px-5 hover:border-blue-200 hover:bg-blue-50 transition-colors" aria-label="Visit Alexander Freise">
+                            <img class="max-h-14 md:max-h-16 w-auto max-w-full object-contain" src="/images/freise.jpg" alt="Alexander Freise">
                         </a>
                     </div>
                 </div>
@@ -148,7 +164,7 @@
             </section>
 
             <!-- Report Showcase Section -->
-            <section class="py-32 bg-gradient-to-br from-gray-50 to-blue-50">
+            <section id="product" class="py-32 bg-gradient-to-br from-gray-50 to-blue-50 scroll-mt-8">
                 <div class="container px-4 mx-auto max-w-7xl">
                     <div class="text-center mb-16">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -307,8 +323,8 @@
                             <p class="text-sm text-gray-600">Detailed listener analytics</p>
                         </div>
                         <div class="text-center p-6 bg-gray-50 rounded-xl">
-                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/anchor.svg" alt="Anchor">
-                            <h3 class="font-bold text-gray-900">Anchor & YouTube</h3>
+                            <img class="h-16 w-16 mx-auto mb-4" src="/images/icons/youtube.svg" alt="YouTube">
+                            <h3 class="font-bold text-gray-900">YouTube</h3>
                             <p class="text-sm text-gray-600">Automatic data synchronization</p>
                         </div>
                         <div class="text-center p-6 bg-gray-50 rounded-xl">
@@ -332,7 +348,7 @@
                     </div>
                 </div>
             </section>
-            <section class="py-20 xl:bg-contain bg-top bg-no-repeat" style="background-image: url('/metis-assets/backgrounds/intersect.svg')">
+            <section id="pricing" class="py-20 xl:bg-contain bg-top bg-no-repeat scroll-mt-8" style="background-image: url('/metis-assets/backgrounds/intersect.svg')">
                 <div class="container px-4 mx-auto">
                     <div class="text-center mb-16">
                         <h2 class="max-w-lg mx-auto mb-4 text-4xl font-bold font-heading">
@@ -798,7 +814,7 @@
         </section>
         
         <!-- Analytics Teams Section -->
-        <section class="py-24 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <section id="developers" class="py-24 bg-gradient-to-br from-indigo-50 to-purple-50 scroll-mt-8">
             <div class="container px-4 mx-auto max-w-6xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -975,7 +991,7 @@
         </section>
 
         <!-- Zero Risk Section -->
-        <section class="py-20 bg-gray-50">
+        <section id="security" class="py-20 bg-gray-50 scroll-mt-8">
             <div class="container px-4 mx-auto max-w-6xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -1342,7 +1358,7 @@
     </div>
 </section>
 <div class="fixed bottom-0 right-0 z-50 mb-4 mr-4">
-    <a href="#top" class="back-to-top" aria-label="Back to top">
+    <a href="#top" class="back-to-top opacity-0 pointer-events-none transition-opacity" aria-label="Back to top">
         <svg
             class="w-12 h-12 text-blue-600"
             xmlns="http://www.w3.org/2000/svg"
