@@ -107,56 +107,62 @@
             </section>
 
             <!-- Why Trust Us Section -->
-            <section class="py-20 bg-white">
+            <section id="security" class="py-20 md:py-24 bg-gray-50 scroll-mt-8">
                 <div class="container px-4 mx-auto max-w-6xl">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Warum <span class="text-blue-600">Open Podcast</span>?
-                        </h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Transparenz, Sicherheit und deine Datenhoheit stehen bei uns an erster Stelle.
-                        </p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="text-center p-6 bg-gray-50 rounded-xl">
-                            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
+                        <div class="lg:col-span-2 p-8 md:p-10 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+                            <p class="text-sm font-semibold uppercase tracking-widest text-blue-100 mb-4">Warum Open Podcast?</p>
+                            <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">Deine Daten bleiben deine Daten.</h2>
+                            <p class="text-lg text-blue-100 leading-relaxed">Open Podcast ergänzt deine bestehenden Plattformen, ohne die Kontrolle über deinen Podcast zu übernehmen. Wir benötigen keine Passwörter und verkaufen deine Daten nicht.</p>
+                            <div class="mt-8 pt-8 border-t border-white/20 flex items-start gap-3">
+                                <svg class="w-6 h-6 flex-shrink-0 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                 </svg>
+                                <p class="font-semibold">Dein Podcast bleibt bei deinem bisherigen Hoster. Wir lesen ausschließlich die freigegebenen Analysedaten.</p>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-3">Open Source</h3>
-                            <p class="text-gray-600 text-sm">Vollständig transparente, quelloffene Lösung. Du kannst den Code jederzeit einsehen.</p>
                         </div>
-                        
-                        <div class="text-center p-6 bg-gray-50 rounded-xl">
-                            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.029 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/>
-                                </svg>
+
+                        <div class="lg:col-span-3 grid sm:grid-cols-2 gap-4">
+                            <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm7.5 0c-1.5 4-5.25 6.75-10.5 6.75S3 16 1.5 12C3 8 6.75 5.25 12 5.25S21 8 22.5 12z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Nur Lesezugriff</h3>
+                                <p class="text-gray-600 leading-relaxed">Du verbindest deine Plattformen mit eingeschränkten Analyse-Rechten. Deine Login-Daten bleiben bei dir.</p>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-3">DSGVO-Konform</h3>
-                            <p class="text-gray-600 text-sm">Server in Deutschland, höchste Datenschutzstandards. Kein Big Tech, kein Datenverkauf.</p>
-                        </div>
-                        
-                        <div class="text-center p-6 bg-gray-50 rounded-xl">
-                            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-                                </svg>
+
+                            <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Server in Deutschland</h3>
+                                <p class="text-gray-600 leading-relaxed">Deine Podcast-Daten werden in Deutschland gespeichert und nach DSGVO-Standards verarbeitet.</p>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-3">Deine Daten</h3>
-                            <p class="text-gray-600 text-sm">Du behältst volle Kontrolle. Export in CSV, PDF, JSON – keine Vendor Lock-ins.</p>
-                        </div>
-                        
-                        <div class="text-center p-6 bg-gray-50 rounded-xl">
-                            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
+
+                            <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v8m0 0l-3-3m3 3l3-3M5 4h14a2 2 0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Export ohne Lock-in</h3>
+                                <p class="text-gray-600 leading-relaxed">Lade Auswertungen als PDF, CSV oder JSON herunter und nutze sie in deinen eigenen Tools.</p>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-3">Einfach & Sicher</h3>
-                            <p class="text-gray-600 text-sm">Keine technischen Kenntnisse nötig. Sichere eigene Infrastruktur.</p>
+
+                            <div class="p-6 bg-white border border-gray-200 rounded-2xl">
+                                <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l-3 3 3 3m8-6l3 3-3 3m-2-9l-4 12"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2">Quelloffen & nachvollziehbar</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">Prüfe unseren Code und verfolge die Entwicklung öffentlich auf GitHub.</p>
+                                <a href="https://github.com/openpodcast" class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-700">Zum GitHub-Profil <span class="ml-1" aria-hidden="true">→</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -973,7 +979,7 @@
         </section>
 
         <!-- Zero Risk Section -->
-        <section id="security" class="py-20 bg-gray-50 scroll-mt-8">
+        <section id="risk-free" class="py-20 bg-gray-50 scroll-mt-8">
             <div class="container px-4 mx-auto max-w-6xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
