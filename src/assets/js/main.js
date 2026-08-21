@@ -40,9 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function scrollToBottom() {
-    //scroll to bottom smoothly
     window.scrollTo({
         top: document.body.scrollHeight,
-        behavior: 'smooth'
+        behavior: 'auto'
     });
 }
