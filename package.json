@@ -12,8 +12,9 @@
     "css": "npm-run-all --sequential css-*",
     "build": "mkdir -p public && npm-run-all --sequential copy-* css",
     "watch": "npm-run-all build --parallel watch-* browsersync",
-    "copy-static": "cp -r src/html/* src/assets/* _redirects public/",
-    "watch-static": "nodemon --watch src --ext '*' --exec 'cp -r src/html/* src/assets/* public/'",
+    "copy-static": "mkdir -p public && cp -r src/html/* src/assets/* _redirects public/",
+
+    "watch-static": "nodemon --watch src --watch _redirects --ext '*' --exec 'npm run copy-static'",
     "watch-css": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify --watch"
   },
   "dependencies": {
